@@ -53,5 +53,16 @@ int main() {
         cout << "Errore nella creazione del file." << endl;
     }
 
+
+    cout << "\n--- TEST SALVATAGGIO E RICARICA ---" << endl;
+    if(toDoList.salva("database_attivita.txt")) {
+        cout << "Salvataggio riuscito!" << endl;
+    }
+
+    Lista listaRicaricata;
+    if(listaRicaricata.carica("database_attivita.txt")) {
+        cout << "Ricarica riuscita! Elementi caricati: " << listaRicaricata.quante() << endl;
+        listaRicaricata.mostraTutte();
+    }
     return 0;
 }
