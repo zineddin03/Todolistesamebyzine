@@ -39,3 +39,22 @@
 
 # debug information files
 *.dwo
+# --- AGGIUNTE FONDAMENTALI PER CLION E CMAKE ---
+
+# Cartelle di build di CMake (dove CLion compila tutto)
+cmake-build-debug/
+cmake-build-release/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# File di configurazione dell'IDE (CLion)
+.idea/
+
+# File spazzatura del Mac
+.DS_Store
+
+# Dipendenze scaricate (Google Test)
+_deps/
