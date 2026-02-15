@@ -45,7 +45,7 @@ int main() {
 
     toDoList.mostraStatistiche();
 
-
+// salvataggio dei dati su file esterno csv per excel txt per il profrmamma
     cout << "\n--- TEST  Esportazione file ---" << endl;
     if(toDoList.esportaCSV("lista_impegni.csv")) {
         cout << "File 'lista_impegni.csv' creato correttamente." << endl;
@@ -58,7 +58,7 @@ int main() {
     if(toDoList.salva("database_attivita.txt")) {
         cout << "Salvataggio riuscito!" << endl;
     }
-
+// verfica del salvataggio
     Lista listaRicaricata;
     if(listaRicaricata.carica("database_attivita.txt")) {
         cout << "Ricarica riuscita! Elementi caricati: " << listaRicaricata.quante() << endl;

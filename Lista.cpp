@@ -17,6 +17,7 @@ int Lista::trovaIndice(int id) {
 }
 
 void Lista::aggiungi(string titolo, string descrizione, int priorita) {
+    //creazione di un oggetto temporaneo e lo aggiunge al vettore
     Attivita temp(contatore, titolo, descrizione, priorita);
     attivita.push_back(temp);
     contatore++;
@@ -25,6 +26,7 @@ void Lista::aggiungi(string titolo, string descrizione, int priorita) {
 void Lista::rimuovi(int id) {
     int indice = trovaIndice(id);
     if(indice != -1) {
+        //cancellazzzione elemento della memoria vettore
         attivita.erase(attivita.begin() + indice);
     }
 }

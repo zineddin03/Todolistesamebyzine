@@ -9,14 +9,12 @@ class Lista {
 private:
     vector<Attivita> attivita;
     int contatore;
-
-
     int trovaIndice(int id);
 
 public:
+
     Lista();
-
-
+    //gestione delle attivita
     void aggiungi(string titolo, string descrizione, int priorita);
     void rimuovi(int id);
     void modificaStato(int id, bool completata);
@@ -34,9 +32,9 @@ public:
     void mostraPerPriorita(int minPriorita);
     void mostraScadute();
     void mostraInScadenza(int giorniMax);
-
+//funzione di ricerca
     void cercaPerTitolo(string parola);
-    Attivita* trovaAttivita(int id);//è un metodo di ricerca che restiuitus e un puntatore ad un oggetto di tipo attività
+    Attivita* trovaAttivita(int id);
 
     int quante();
     int quanteCompletate();
@@ -45,12 +43,12 @@ public:
     int quanteScadute();
     void mostraStatistiche();
 
-
+//funzioni di pulizia
     void cancellaCompletate();
     void cancellaTutte();
     vector<string> ottieniCategorie();
 
-
+//salvataggio
     bool salva(string nomeFile);
     bool carica(string nomeFile);
     bool esportaCSV(string nomeFile);

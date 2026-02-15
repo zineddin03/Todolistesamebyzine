@@ -38,6 +38,6 @@ target_link_libraries(run_tests PRIVATE
         GTest::gtest_main
 )
 
-# Integrazione con CTest (opzionale, ma utile)
+# Integrazione con CTest
 include(GoogleTest)
 gtest_discover_tests(run_tests)

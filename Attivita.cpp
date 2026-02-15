@@ -1,6 +1,6 @@
 #include "Attivita.h"
 #include <iostream>
-
+//costruttore
 Attivita::Attivita() {
     id = 0;
     titolo = "";
@@ -22,7 +22,7 @@ Attivita::Attivita(int i, string t, string d, int p) {
     dataCreazione = time(0);
     dataScadenza = 0;
 }
-
+//stamoa a video
 void Attivita::stampa() {
     cout << "ID: " << id << endl;
     cout << "Titolo: " << titolo << endl;
@@ -38,7 +38,7 @@ void Attivita::stampa() {
         cout << "Stato: COMPLETATA" << endl;
     } else {
         cout << "Stato: DA FARE" << endl;
-        
+        // counter giorni
         if(dataScadenza > 0) {
             int giorni = giorniMancanti();
             if(giorni < 0) {

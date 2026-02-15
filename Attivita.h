@@ -4,7 +4,7 @@
 #include <string>
 #include <ctime>
 using namespace std;
-
+//variabili
 class Attivita {
 private:
     int id;
@@ -15,11 +15,11 @@ private:
     string categoria;
     time_t dataCreazione;
     time_t dataScadenza;
-    
+
 public:
     Attivita();
     Attivita(int i, string t, string d, int p);
-    
+    //lettura dei dati
     int getId() { return id; }
     string getTitolo() { return titolo; }
     string getDescrizione() { return descrizione; }
@@ -28,7 +28,10 @@ public:
     string getCategoria() { return categoria; }
     time_t getDataCreazione() { return dataCreazione; }
     time_t getDataScadenza() { return dataScadenza; }
-    
+
+
+    //setting dei dati
+
     void setTitolo(string t) { titolo = t; }
     void setDescrizione(string d) { descrizione = d; }
     void setPriorita(int p) { priorita = p; }
